@@ -24,7 +24,7 @@ class PostFactory extends Factory
             'content' => fake()->paragraph(),
             'picture' => fake()->imageUrl(500, 500, true),
             'description' => fake()->paragraph(),
-            'published' => Arr::random(['true', 'false']),
+            'published' => Arr::random([true, false]),
             'publicationDate' => fake()->date(),
             'user_id' => User::where('role', 'Editor')->get('id')->random(),
             'category_id' => Category::all('id')->random(),
